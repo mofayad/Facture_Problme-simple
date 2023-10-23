@@ -1,0 +1,22 @@
+Algorithme dix_entiers 
+Variables 
+  nom_prenom: chaine de caractéres
+  prix_article, somme, ttc: réel
+  i, j, nb_articles: entier
+Début
+    Pour i<-- 1 à 3 pas 1 Faire
+	Ecrire("Donner le nom et prénom du client n",i,":")
+	Lire(nom_prenom)
+	Ecrire("Donner le nombre d'articles pour le client n", i,":")
+	Lire(nb_articles)
+	somme<-- 0
+	    Pour j<-- 1 à nb_articles pas 1 Faire 
+		Ecrire("Donner le prix de l'article",j,":")
+		Lire(prix_article)
+		somme<-- somme + prix_article
+		FinPour
+	ttc<-- somme * (1+0.15)
+	ttc<-- ttc * (1-0.02)
+	Ecrire("Le total à payer pour le client",nom_prenom,"est:",ttc,"DH")
+	FinPour
+Fin
